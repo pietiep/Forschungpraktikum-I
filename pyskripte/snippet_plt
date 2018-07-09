@@ -1,0 +1,7 @@
+#            x_coor = B[:,5]
+#            y_coor = B[:,0]
+#            print(x_coor, y_coor)
+#            plt.plot(x_coor, y_coor)
+#            out_pic = target + '/' + target.lower() + '_%s.pdf' %index_na[i]
+#            plt.savefig(out_pic, bbox_inches='tight')
+

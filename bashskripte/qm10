@@ -1,0 +1,93 @@
+#!/bin/bash
+#
+# qm00: Submit a MOLPRO 201010101010101010101010 job to a pbs batch queue.
+#
+# $1      -- base name of input file.
+# $2      -- queue time: short, long (default)
+# $3      -- number of processors
+
+echo 'qm00 entered at:' $(date)
+echo 'requested queue:' $2
+
+nd=',nodes=1'
+
+if [ x$3 == x ]
+  then
+  nproc=1
+else
+  nproc=$3
+fi
+
+let mem=3*$nproc-1
+let mem=2*$nproc-1
+
+bin='molpro'
+
+queue=$2$3
+rt='9999:00:00'
+if [ x$2 == x"short" ]
+  then
+  rt='72:00:00'
+fi
+if [ x$2 == x"long" ]
+  then
+  rt='672:00:00'
+fi
+
+echo 'specified queue:'   $queue
+echo 'specified runtime:' $rt
+echo 'requested processors:' $nproc
+echo 'requested memory:    ' $mem
+echo 'specified input file:' $1
+
+# work directory:
+work=`pwd`
+echo 'work directory:' $work
+
+#------------------------------------------------------------------------------
+# Write job file for PBS:
+#------------------------
+cat <<END >$1.job
+#!/bin/sh
+
+#queue parameters:
+#PBS -N $1
+#PBS -S /bin/bash
+#PBS -j oe
+#PBS -o $1.llog
+#PBS -q $queue
+#PBS -l mem=${mem}gb,file=10gb
+#PBS -l walltime=$rt
+#PBS -l ncpus=$nproc
+#PBS -l nodes=1:ppn=$nproc
+
+
+FILE=$1
+
+cp \$PBS_O_WORKDIR/\$FILE.com \$PBS_WORKDIR/
+cd \$PBS_WORKDIR
+
+#-----------------------------------------
+# create rescue file:
+cat << END2 >> rescue
+echo 'executing rescue file'
+cp \$FILE.out \$PBS_O_WORKDIR
+cp \$FILE.log \$PBS_O_WORKDIR
+cp *.mol \$PBS_O_WORKDIR
+END2
+#-----------------------------------------
+
+molpro.2010 -W/raid/home/$USER/wfu \$FILE.com
+
+cp \$FILE.out \$PBS_O_WORKDIR
+cp \$FILE.log \$PBS_O_WORKDIR
+cp *.mol \$PBS_O_WORKDIR
+
+rm rescue
+
+echo 'job finished at ' \$(date)
+
+exit
+
+END
+

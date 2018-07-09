@@ -1,0 +1,58 @@
+prologue on tcp2a0b:start (8343)
+# create directories for PBS_WORKDIR & TMP
+# check free disk space
+# set cpus to performance
+Setting cpu: 0
+Setting cpu: 1
+Setting cpu: 2
+Setting cpu: 3
+Setting cpu: 4
+Setting cpu: 5
+Setting cpu: 6
+Setting cpu: 7
+Setting cpu: 8
+Setting cpu: 9
+Setting cpu: 10
+Setting cpu: 11
+Setting cpu: 12
+Setting cpu: 13
+Setting cpu: 14
+Setting cpu: 15
+Setting cpu: 16
+Setting cpu: 17
+Setting cpu: 18
+Setting cpu: 19
+prologue on tcp2a0b:end (8343)
+epilogue:start (9371)
+Resource limits:file=10gb,mem=23gb,ncpus=20,neednodes=1:ppn=20,nodes=1:ppn=20,walltime=72:00:00
+Resource used:  cput=24:31:11,mem=28635484kb,vmem=46407988kb,walltime=01:22:09
+# set cpus to powersave
+Setting cpu: 0
+Setting cpu: 1
+Setting cpu: 2
+Setting cpu: 3
+Setting cpu: 4
+Setting cpu: 5
+Setting cpu: 6
+Setting cpu: 7
+Setting cpu: 8
+Setting cpu: 9
+Setting cpu: 10
+Setting cpu: 11
+Setting cpu: 12
+Setting cpu: 13
+Setting cpu: 14
+Setting cpu: 15
+Setting cpu: 16
+Setting cpu: 17
+Setting cpu: 18
+Setting cpu: 19
+Execute rescue...
+rescue obsolete, please use: #PBS -l epilogue=<user-epilogue-file>
+bash: rescue: command not found
+Deleting tmp directory.
+Moving files from /scratch/fscr/protassow_46965.tcPBSx.chemie.uni-bielefeld.de to /scratch/scr/protassow/46965.tcPBSx.chemie.uni-bielefeld.de
+Checking resource violations.
+05/02 18:13:35 MSysRegEvent(JOBRESVIOLATION:  job '46965' in state 'Running' has exceeded MEM resource limit (1398 > 1177) (action CANCEL will be taken)  job start time: 2017-05-02 16:51:26
+Last job of protassow on tcp2a0b finished. Killing all remaining jobs of protassow.
+epilogue:end (9371)

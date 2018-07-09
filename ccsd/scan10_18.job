@@ -1,0 +1,41 @@
+#!/bin/sh
+
+#queue parameters:
+#PBS -N scan2
+#PBS -S /bin/bash
+#PBS -j oe
+#PBS -o scan2.llog
+#PBS -q prakt
+#PBS -l mem=23gb,file=10gb
+#PBS -l walltime=72:00:00
+#PBS -l ncpus=20
+#PBS -l nodes=1:ppn=20
+
+
+FILE=scan10_18
+
+cp $PBS_O_WORKDIR/$FILE.com $PBS_WORKDIR/
+cd $PBS_WORKDIR
+
+#-----------------------------------------
+# create rescue file:
+cat << END2 >> rescue
+echo 'executing rescue file'
+cp $FILE.out $PBS_O_WORKDIR
+cp $FILE.log $PBS_O_WORKDIR
+cp *.mol $PBS_O_WORKDIR
+END2
+#-----------------------------------------
+
+molpro2015 -W/raid/home/protassow/wfu $FILE.com
+
+cp $FILE.out $PBS_O_WORKDIR
+cp $FILE.log $PBS_O_WORKDIR
+cp *.mol $PBS_O_WORKDIR
+
+rm rescue
+
+echo 'job finished at ' $(date)
+
+exit
+
