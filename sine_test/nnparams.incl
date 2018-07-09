@@ -1,0 +1,102 @@
+**** Parameters
+*** maxneu:       max. number of neurons per hidden layer
+*** maxnin:       max. number of neurons in input layer
+*** maxnout:      max. number of neurons in output layer
+*** maxpout:      max. number of values in output pattern
+*** maxlay:       max. number of layers (always >2)
+*** maxtypes:     max. number of neuron types
+*** maxtpar:      max. number of parameters for each neuron type
+*** maxpats:      max. number of learning patterns
+*** ignthresh:    ignore sqopt if true
+      
+      real*8  pi,infty,zero
+      integer maxneu,maxlay,maxtypes,maxtpar
+      integer maxpats
+      integer maxnin,maxnout,maxpout
+      integer maxwei,neucap,wbcap,errcap
+      integer iinfty
+      integer iout,nnunit,perfunit
+      logical ignthresh
+      character*8 stdfmt
+      character*10 nnfdir,nnsdir
+      character*16 sline,asline
+      character*16 mform,smform,miform
+      character*16 lrfmt
+      character*32 nndatfile,sampfile,perfile
+      character*32 nnparfile
+
+      parameter (maxneu=70,maxnin=3,maxnout=8)
+      parameter (maxpout=8)
+      parameter (maxlay=4,maxtypes=2,maxtpar=1)
+      parameter (maxpats=30000)
+
+      parameter (ignthresh=.true.)
+!      parameter (ignthresh=.false.) !don't ignore sqopt
+
+**********************************************************
+**** Inferred Parameters
+*** maxwei:       max. total number of weight matrix elements
+*** neucap:       max. total number of neurons
+*** wbcap:        max. total number of weights and biases
+*** errcap:       max. total number of error vector elements
+
+      parameter (maxwei=(maxlay-3)*maxneu**2+maxneu*(maxnin+maxnout))
+      parameter (neucap=(maxlay-2)*maxneu+maxnin+maxnout)
+      parameter (wbcap=maxwei+neucap)
+      parameter (errcap=maxnout*maxpats)
+
+*** WARNING: maxwei may fail for 2-layered networks 
+***          if maxnin*maxnout is  sufficiently large!
+
+**********************************************************
+**** Numerical Parameters
+*** infty:  largest possible double precision real value.
+*** iinfty: largest possible integer value.
+*** zero:   sets what is considered an irrelevant difference in size
+***         use for comarison of reals, to determine 
+***         'dangerously small' values, etc
+
+      !             3.14159265358979323846264338327950...
+      parameter (pi=3.1415926536D0)
+      parameter (infty=huge(1.0D0),iinfty=huge(1))
+      parameter (zero=1.0D-8)
+
+**********************************************************
+**** I/O Parameters
+*** iout:     standard output for vranf error messages
+*** nnunit:   temporary UNIT for misc. output files
+*** perfunit: UNIT for performance logfile
+***
+*** lrfmt:     format for long real output
+*** nndatfile: filename for analytically generated DATA-blocks
+*** nnparfile: filename for best fitted parameters to be
+***            written on
+*** sampfile:  filename for displaying sampled points in
+***            configuration space
+*** perfile:   filename for logged fitting performances.
+*** nnfdir: directory for dumping fit files, exact length 10! !? fix this
+*** nnsdir: directory for dumping scans, up to length 10.     !? same
+
+      parameter (nndatfile='DATA_ANN.in')
+      parameter (nnparfile='../nnfits/fit_pars.in')
+      parameter (sampfile='../scans/samples.dat')
+      parameter (perfile='../logs/performance.log')
+      parameter (nnfdir='../nnfits/',nnsdir='../scans/')
+
+      parameter (lrfmt='(ES20.12)')
+
+      parameter (iout=6,nnunit=800,perfunit=801) 
+
+**********************************************************
+**** Debugging Parameters
+*** sline:  separation line
+*** asline: alternative sep. line
+*** mform: standard form for matrix output
+*** miform: standard form for integer matrix output
+*** smform: shortened form for matrix output
+*** stdfmt: standard format for strings
+
+      parameter (sline='(60("*"))',asline='(60("#"))')
+      parameter (mform='(5ES12.4)',smform='(5ES10.2)')
+      parameter (miform='(5I12)')
+      parameter (stdfmt='(A)')

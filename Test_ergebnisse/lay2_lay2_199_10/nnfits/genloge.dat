@@ -1,0 +1,54 @@
+Fri Jun 10 16:45:53 CEST 2016
+Reading file '/raid/home/protassow/Prog_1/bin/predict.in' ...
+File read.
+No RANDOM card found; parameters will be read.
+No random seed specified; seed set to     8236475
+No random generator type specified; gtype set to 1
+NSET: Selected number of ANNs:    50
+No SEL specified, default of 15.0% sets will be selected as parents
+No DIFPER specified, default difference set to  0.1
+No MAXIT specified; default number of iterations is  100
+No MICIT specified; default number of iterations is 1000
+GSPREAD set to      5.    
+MUTATION set to      0.    
+ no. of data sets:           1
+NLAY: number of layers set to  3
+Set neuronal population:
+   10:   20:    1
+NUMBER OF NERON TYPES:  2
+Set type population:
+Layer  1:
+   10:    0
+Layer  2:
+   20:    0
+Layer  3:
+    0:    1
+NPAT: only first     18 patterns are read.
+WSPREAD set to     1.5    
+BSPREAD set to     1.0    
+No WSTEPSCALE-value specified; set to  1.0000E-01
+No BSTEPSCALE-value specified; set to  1.0000E-01
+No WMAXSTEP-value specified; set to  2.5000E-02
+No BMAXSTEP-value specified; set to  2.5000E-02
+No WSTEPTHRESH-value specified; set to  1.0000E-01
+No BSTEPTHRESH-value specified; set to  1.0000E-01
+NOSTEPLIM: step size will not be controlled.
+MAXBPIT set to:   500
+Total number of ANN weights and biases: 241
+Total number of parameters: 241
+Generating parameter-keys..
+Reading parameters from input..
+Found key 'W(01,02):', reading...
+Found key 'W(02,03):', reading...
+Found key 'B(02):', reading...
+Found key 'B(03):', reading...
+Paramerers read.
+Setting all weights and biases to active
+WARNING: all parameters frozen!
+NNMODE enabled, reading data points...
+Reading successful.
+Number of pattern pairs for fit:    18
+Transfer data structures..
+Transfer complete.
+Parameters frozen. Skipping fit.
+RMS of given data and parameter set:  2.67E+00

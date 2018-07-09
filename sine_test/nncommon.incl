@@ -1,0 +1,40 @@
+****Basic data structures and special constants for ANN
+***
+***   /ann/:       block containing basic structural information 
+***                required for propagation etc
+***   /nnio/:      block containing constants for translating
+***                input variables/function values into NN input/output
+***   /nnopt/:     block containing information for convergence acceleration
+***
+***
+***   laystr:      layer structure matrix
+***      laystr(1,N):   number of neurons in layer N
+***      laystr(2,N):   starting pos. for layer N
+***      laystr(3,N):   starting pos. for weight matrix from layer N to N+1
+***   typop:       type population matrix
+***
+***   nlay:        number of given layers
+***   inp_in:      number of coordinates in input (not implemented)
+***   inp_out:     number of values in output
+***   len_in:      number of input neurons
+***   len_out:     number of output neurons
+***
+*** convergence Acceleration parameters 
+***
+***   wei_alim:    threshold for switching stepsize limit for weights
+***   bi_alim:     threshold for switching stepsize limit for biases
+***   wei_amax:    absolute maximum step size for |weights| <= wei_alim
+***   bi_amax:     absolute maximum step size for |biases| <= bi_alim
+***   wei_ascale:  relative maximum step size for |weights| > wei_alim
+***   bi_ascale:   relative maximum step size for |biases| > bi_alim
+
+      real*8  wei_alim,bi_alim,wei_amax,bi_amax
+      real*8  wei_ascale,bi_ascale
+      integer laystr(3,maxlay),typop(maxtypes,maxlay)
+      integer nlay,len_in,len_out,inp_out !,inp_in
+      logical limstep
+      
+      common /ann/ nlay,laystr,typop
+      common /nnio/ inp_out, len_in, len_out !,inp_in
+      common /nnopt/ wei_alim,bi_alim,wei_amax,bi_amax,
+     >               wei_ascale,bi_ascale,limstep

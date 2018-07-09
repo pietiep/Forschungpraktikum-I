@@ -1,0 +1,47 @@
+dbg:
+!freeze:
+
+RANDOM:
+
+!seed: 8346587
+!seed: 4165707742
+!seed: 2043862280
+!seed: 2386027071
+!seed: 657080320
+!seed: 3590807976
+!seed: 3103385429
+!seed: 259357957
+!seed: 1739130905
+!seed: 641122357
+!seed: 560706210
+
+NNMODE:
+GSPREAD: 5
+
+NSET: 10
+NLAY: 3
+NTYPES: 2
+
+NEUPOP: 2 30 1
+LTYPES:    1 2
+SQOPT: 0.02D-5
+
+!...generate input analytically
+PATMODE: -3
+XRANGES: 
+     -1.0D0    -1.0D0
+      1.0D0     1.0D0
+
+NPAT: 20
+!...
+
+WSPREAD: 1.5D0
+BSPREAD: 1.0D0
+
+SETS: 1
+NPOINTS: 500
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!END OF OPTIONS!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+! no more options cards behind the DATA: card!

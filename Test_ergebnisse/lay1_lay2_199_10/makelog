@@ -1,0 +1,165 @@
+Tue Jun 14 15:03:37 CEST 2016
+Reading file '/raid/home/protassow/Prog_1/bin/partco.in' ...
+File read.
+RANDOM: Random parameters will be chosen.
+No random seed specified; seed set to     8236475
+No random generator type specified; gtype set to 1
+NSET: Selected number of ANNs:    50
+No SEL specified, default of 15.0% sets will be selected as parents
+No DIFPER specified, default difference set to  0.1
+No MAXIT specified; default number of iterations is  100
+No MICIT specified; default number of iterations is 1000
+GSPREAD set to      5.    
+MUTATION set to      0.    
+ no. of data sets:           1
+NLAY: number of layers set to  3
+Set neuronal population:
+   10:   20:    1
+NUMBER OF NERON TYPES:  2
+Set type population:
+Layer  1:
+   10:    0
+Layer  2:
+   20:    0
+Layer  3:
+    0:    1
+NPAT: only first    199 patterns are read.
+WSPREAD set to     1.5    
+BSPREAD set to     1.0    
+No WSTEPSCALE-value specified; set to  1.0000E-01
+No BSTEPSCALE-value specified; set to  1.0000E-01
+No WMAXSTEP-value specified; set to  2.5000E-02
+No BMAXSTEP-value specified; set to  2.5000E-02
+No WSTEPTHRESH-value specified; set to  1.0000E-01
+No BSTEPTHRESH-value specified; set to  1.0000E-01
+NOSTEPLIM: step size will not be controlled.
+MAXBPIT set to:   500
+Total number of ANN weights and biases: 241
+Total number of parameters: 241
+Generating parameter-keys..
+Setting all weights and biases to active
+NNMODE enabled, reading data points...
+Reading successful.
+Number of pattern pairs for fit:   199
+Transfer data structures..
+Transfer complete.
+############################################################
+Neural Network #0001: Start!
+Final rms: 1.23275212455390E-01(#0001)
+Neural Network #0002: Start!
+Final rms: 1.39921027309692E-02(#0002)
+Neural Network #0003: Start!
+Final rms: 6.36685142058481E-02(#0003)
+Neural Network #0004: Start!
+Final rms: 7.99748241310589E-03(#0004)
+Neural Network #0005: Start!
+Final rms: 9.73814497790031E-03(#0005)
+Neural Network #0006: Start!
+Final rms: 2.34937102462516E-02(#0006)
+Neural Network #0007: Start!
+Final rms: 3.28470382612729E-02(#0007)
+Neural Network #0008: Start!
+Final rms: 1.04623350690664E-01(#0008)
+Neural Network #0009: Start!
+Final rms: 9.17924394675051E-02(#0009)
+Neural Network #0010: Start!
+Final rms: 1.83935816236409E-02(#0010)
+Neural Network #0011: Start!
+Final rms: 3.48751119041740E-02(#0011)
+Neural Network #0012: Start!
+Final rms: 2.59924532142326E-02(#0012)
+Neural Network #0013: Start!
+Final rms: 2.46775122761830E-02(#0013)
+Neural Network #0014: Start!
+Final rms: 5.00841787109323E-02(#0014)
+Neural Network #0015: Start!
+Final rms: 6.38937349433942E-02(#0015)
+Neural Network #0016: Start!
+Final rms: 3.19129741823909E-02(#0016)
+Neural Network #0017: Start!
+Final rms: 7.09268280877936E-02(#0017)
+Neural Network #0018: Start!
+Final rms: 1.78067166839573E-02(#0018)
+Neural Network #0019: Start!
+Final rms: 9.79149250180130E-02(#0019)
+Neural Network #0020: Start!
+Final rms: 4.27164444685707E-02(#0020)
+Neural Network #0021: Start!
+Final rms: 1.86558576573518E-02(#0021)
+Neural Network #0022: Start!
+Final rms: 3.83313104792543E-02(#0022)
+Neural Network #0023: Start!
+Final rms: 4.91378437760578E-02(#0023)
+Neural Network #0024: Start!
+Final rms: 2.34749575760142E-02(#0024)
+Neural Network #0025: Start!
+Final rms: 2.59167852371230E-01(#0025)
+Neural Network #0026: Start!
+Final rms: 6.82274343615614E-02(#0026)
+Neural Network #0027: Start!
+Final rms: 3.90088304418178E-02(#0027)
+Neural Network #0028: Start!
+Final rms: 6.92666955618606E-02(#0028)
+Neural Network #0029: Start!
+Final rms: 2.51030965007567E-01(#0029)
+Neural Network #0030: Start!
+Final rms: 3.12860459242817E-02(#0030)
+Neural Network #0031: Start!
+Final rms: 1.92790439173209E-01(#0031)
+Neural Network #0032: Start!
+Final rms: 1.21330571924754E-02(#0032)
+Neural Network #0033: Start!
+Final rms: 2.73537384583322E-02(#0033)
+Neural Network #0034: Start!
+Final rms: 3.11442136097663E-02(#0034)
+Neural Network #0035: Start!
+Final rms: 2.08763608216332E-01(#0035)
+Neural Network #0036: Start!
+Final rms: 2.37774392879752E-01(#0036)
+Neural Network #0037: Start!
+Final rms: 3.68756323884193E-01(#0037)
+Neural Network #0038: Start!
+Final rms: 1.75445242895996E-02(#0038)
+Neural Network #0039: Start!
+Final rms: 5.45560714578481E-02(#0039)
+Neural Network #0040: Start!
+Final rms: 8.07160620005936E-02(#0040)
+Neural Network #0041: Start!
+Final rms: 2.30700294329361E-02(#0041)
+Neural Network #0042: Start!
+Final rms: 2.05795268330035E-02(#0042)
+Neural Network #0043: Start!
+Final rms: 1.76843888628939E-02(#0043)
+Neural Network #0044: Start!
+Final rms: 8.68493469645245E-02(#0044)
+Neural Network #0045: Start!
+Final rms: 5.24011368584406E-03(#0045)
+Neural Network #0046: Start!
+Final rms: 4.86209604781739E-02(#0046)
+Neural Network #0047: Start!
+Final rms: 1.04377528264834E-02(#0047)
+Neural Network #0048: Start!
+Final rms: 6.02190216660037E-02(#0048)
+Neural Network #0049: Start!
+Final rms: 1.20543635700954E-01(#0049)
+Neural Network #0050: Start!
+Final rms: 2.23857016910567E-02(#0050)
+
+############################################################
+Training complete.
+Searching for best fit..
+Best rms found:           5.2401E-03
+************************************************************
+
+Ranking errors (top 10%):
+        FIT#         RMS
+          45  5.2401E-03
+           4  7.9975E-03
+           5  9.7381E-03
+          47  1.0438E-02
+          32  1.2133E-02
+************************************************************
+
+Sorting parameter vector..
+Done.
+Writing best parameters to '../nnfits/fit_pars.in' ...
